@@ -1,11 +1,11 @@
-body {
+/*Layout settings*/
+.body {
     background-color: #EDEFEE;
     margin-top: 3rem;
     margin-bottom: 3rem;
     margin-left: 5%;
     margin-right: 5%;
 }
-
 h1 {
     font-size: 3rem;
 }
@@ -14,12 +14,14 @@ h2 {
     font-size: 2rem;
 }
 
+/*Header*/
 header > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+/*Navigation*/
 nav {
     background-color: #3a5a40;
     margin-top: 1rem;
@@ -37,19 +39,20 @@ nav li {
     flex: 1;
     display: inline-block;
     padding: 1rem;
+    transition: font-size 1s ease;
 }
 
 nav li:hover {
     font-size: 1.5rem;
-    transition: 1s ease;
 }
 
-nav a {
+nav .nav-item {
     color: #f1faee;
     text-decoration: none;
     font-weight: bold;
 }
 
+/*Main*/
 section {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -111,8 +114,8 @@ article {
 .sub-card {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: start;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .outer-card:hover .card-bg-image,
@@ -196,6 +199,7 @@ article {
     transition: 1s ease;
 }
 
+/*Footer*/
 footer {
     display: flex;
     align-items: center;
