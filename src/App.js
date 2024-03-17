@@ -1,14 +1,15 @@
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import BookingProvider from "./providers/BookingProvider";
 
 function App() {
   return (
-    <div>
+    <BookingProvider>
       <Header />
       <Nav />
       <Footer />
-    </div>
+    </BookingProvider>
   );
 }
 

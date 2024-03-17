@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
 import Book from './Book';
+import Menu from './Menu';
 
 const Nav = () => {
   return (
@@ -32,6 +33,7 @@ const Nav = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/book" element={<Book />} />
+        <Route path='/menu' element={<Menu />}></Route>
       </Routes>
     </>
   );

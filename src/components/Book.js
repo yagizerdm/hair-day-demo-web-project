@@ -1,6 +1,21 @@
+import { useBookingContext } from '../providers/BookingProvider';
+
 const Book = () => {
+    const { setBookingInfo } = useBookingContext();
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formData = new FormData(e.target);
+        const fullName = formData.get('fullName');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const msg = formData.get('msg');
+        const copyEmail = formData.get('copyEmail') === 'on';
+        const contactMethod = formData.get('contactMethod');
+        setBookingInfo({ fullName, email, phone, msg, copyEmail, contactMethod });
+
+        alert('Your booking has been confirmed!')
+        e.target.reset();
     }
 
     return (
